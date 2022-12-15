@@ -13,10 +13,15 @@
 		13452123294B63F8007D3840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13452121294B63F8007D3840 /* Main.storyboard */; };
 		13452125294B63F9007D3840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13452124294B63F9007D3840 /* Assets.xcassets */; };
 		13452128294B63F9007D3840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13452126294B63F9007D3840 /* LaunchScreen.storyboard */; };
+		13452136294B6580007D3840 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 13452135294B6580007D3840 /* RxCocoa */; };
+		13452138294B6580007D3840 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 13452137294B6580007D3840 /* RxRelay */; };
+		1345213A294B6580007D3840 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13452139294B6580007D3840 /* RxSwift */; };
+		1345213D294B664C007D3840 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1345213C294B664C007D3840 /* ReactorKit */; };
+		13452141294B67D7007D3840 /* CounterViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13452140294B67D7007D3840 /* CounterViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13452118294B63F8007D3840 /* RecordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13452118294B63F8007D3840 /* CounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1345211B294B63F8007D3840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1345211D294B63F8007D3840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1345211F294B63F8007D3840 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		13452124294B63F9007D3840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13452127294B63F9007D3840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13452129294B63F9007D3840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13452140294B67D7007D3840 /* CounterViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewReactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1345213A294B6580007D3840 /* RxSwift in Frameworks */,
+				13452138294B6580007D3840 /* RxRelay in Frameworks */,
+				1345213D294B664C007D3840 /* ReactorKit in Frameworks */,
+				13452136294B6580007D3840 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +50,7 @@
 		1345210F294B63F8007D3840 = {
 			isa = PBXGroup;
 			children = (
-				1345211A294B63F8007D3840 /* RecordApp */,
+				1345211A294B63F8007D3840 /* CounterApp */,
 				13452119294B63F8007D3840 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +58,88 @@
 		13452119294B63F8007D3840 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13452118294B63F8007D3840 /* RecordApp.app */,
+				13452118294B63F8007D3840 /* CounterApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1345211A294B63F8007D3840 /* RecordApp */ = {
+		1345211A294B63F8007D3840 /* CounterApp */ = {
+			isa = PBXGroup;
+			children = (
+				13452133294B646C007D3840 /* Extensions */,
+				13452132294B641D007D3840 /* UI */,
+				1345212F294B63FF007D3840 /* Supportings */,
+				1345211F294B63F8007D3840 /* ViewController.swift */,
+				13452121294B63F8007D3840 /* Main.storyboard */,
+				13452129294B63F9007D3840 /* Info.plist */,
+			);
+			path = CounterApp;
+			sourceTree = "<group>";
+		};
+		1345212F294B63FF007D3840 /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				13452131294B6412007D3840 /* Resource */,
+				13452130294B6408007D3840 /* Launch */,
+			);
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		13452130294B6408007D3840 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
 				1345211B294B63F8007D3840 /* AppDelegate.swift */,
 				1345211D294B63F8007D3840 /* SceneDelegate.swift */,
-				1345211F294B63F8007D3840 /* ViewController.swift */,
-				13452121294B63F8007D3840 /* Main.storyboard */,
-				13452124294B63F9007D3840 /* Assets.xcassets */,
 				13452126294B63F9007D3840 /* LaunchScreen.storyboard */,
-				13452129294B63F9007D3840 /* Info.plist */,
 			);
-			path = RecordApp;
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		13452131294B6412007D3840 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				13452124294B63F9007D3840 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		13452132294B641D007D3840 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1345213E294B67C2007D3840 /* Counter */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		13452133294B646C007D3840 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1345213E294B67C2007D3840 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				1345213F294B67CC007D3840 /* Reactor */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		1345213F294B67CC007D3840 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				13452140294B67D7007D3840 /* CounterViewReactor.swift */,
+			);
+			path = Reactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13452117294B63F8007D3840 /* RecordApp */ = {
+		13452117294B63F8007D3840 /* CounterApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1345212C294B63F9007D3840 /* Build configuration list for PBXNativeTarget "RecordApp" */;
+			buildConfigurationList = 1345212C294B63F9007D3840 /* Build configuration list for PBXNativeTarget "CounterApp" */;
 			buildPhases = (
 				13452114294B63F8007D3840 /* Sources */,
 				13452115294B63F8007D3840 /* Frameworks */,
@@ -82,9 +149,15 @@
 			);
 			dependencies = (
 			);
-			name = RecordApp;
+			name = CounterApp;
+			packageProductDependencies = (
+				13452135294B6580007D3840 /* RxCocoa */,
+				13452137294B6580007D3840 /* RxRelay */,
+				13452139294B6580007D3840 /* RxSwift */,
+				1345213C294B664C007D3840 /* ReactorKit */,
+			);
 			productName = RecordApp;
-			productReference = 13452118294B63F8007D3840 /* RecordApp.app */;
+			productReference = 13452118294B63F8007D3840 /* CounterApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 13452113294B63F8007D3840 /* Build configuration list for PBXProject "RecordApp" */;
+			buildConfigurationList = 13452113294B63F8007D3840 /* Build configuration list for PBXProject "CounterApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +184,15 @@
 				Base,
 			);
 			mainGroup = 1345210F294B63F8007D3840;
+			packageReferences = (
+				13452134294B6580007D3840 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				1345213B294B664C007D3840 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+			);
 			productRefGroup = 13452119294B63F8007D3840 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13452117294B63F8007D3840 /* RecordApp */,
+				13452117294B63F8007D3840 /* CounterApp */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +217,7 @@
 			files = (
 				13452120294B63F8007D3840 /* ViewController.swift in Sources */,
 				1345211C294B63F8007D3840 /* AppDelegate.swift in Sources */,
+				13452141294B67D7007D3840 /* CounterViewReactor.swift in Sources */,
 				1345211E294B63F8007D3840 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B2V8LG7269;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RecordApp/Info.plist;
+				INFOPLIST_FILE = CounterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -300,7 +378,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.conner.record.RecordApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conner.counterapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,7 +395,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B2V8LG7269;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RecordApp/Info.plist;
+				INFOPLIST_FILE = CounterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.conner.record.RecordApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conner.counterapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13452113294B63F8007D3840 /* Build configuration list for PBXProject "RecordApp" */ = {
+		13452113294B63F8007D3840 /* Build configuration list for PBXProject "CounterApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1345212A294B63F9007D3840 /* Debug */,
@@ -348,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1345212C294B63F9007D3840 /* Build configuration list for PBXNativeTarget "RecordApp" */ = {
+		1345212C294B63F9007D3840 /* Build configuration list for PBXNativeTarget "CounterApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1345212D294B63F9007D3840 /* Debug */,
@@ -358,6 +436,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13452134294B6580007D3840 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		1345213B294B664C007D3840 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13452135294B6580007D3840 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13452134294B6580007D3840 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		13452137294B6580007D3840 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13452134294B6580007D3840 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		13452139294B6580007D3840 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13452134294B6580007D3840 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		1345213C294B664C007D3840 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1345213B294B664C007D3840 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13452110294B63F8007D3840 /* Project object */;
 }
